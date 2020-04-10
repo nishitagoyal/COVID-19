@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+    >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fontFamily="@font/poppins"
+            android:text="COVID-19\nGlobal Cases"
+            android:textAlignment="center"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/LabelTotalConfirmed"
+            android:fontFamily="@font/poppins"
+            android:text="Total Confirmed"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TotalConfirmed"
+            android:fontFamily="@font/poppins"
+            android:text="162837"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTotalConfirmed"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/LabelTotalDeaths"
+            android:fontFamily="@font/poppins"
+            android:text="Total Deaths"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TotalDeaths"
+            android:fontFamily="@font/poppins"
+            android:text="75648"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTotalDeaths"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/LabelTotalRecovered"
+            android:fontFamily="@font/poppins"
+            android:text="Total Recovered"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TotalRecovered"
+            android:fontFamily="@font/poppins"
+            android:text="75938"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTotalRecovered"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Country Details"
+            android:background="@drawable/rounded_button"
+            android:textStyle="bold"
+            android:id="@+id/countrywise"/>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:text="India Details"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_button"
+            android:textStyle="bold"
+            android:id="@+id/statewise"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_circular_dashboard"
+        android:indeterminate="true"
+        android:layout_centerInParent="true" />
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/button_background"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>
